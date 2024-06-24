@@ -15,6 +15,9 @@ function call(data){
         document.getElementById("productPicture").width = "400";
         document.getElementById("productDescription").textContent=`${data[1].description}`;
         document.getElementById("productPrice").textContent=`Price: $${data[1].price}`;
+    }).catch((error)=>{
+        console.log(error);
+        alert("There was an issue with your request.")
     })
 }
 
