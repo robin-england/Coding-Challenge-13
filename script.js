@@ -37,12 +37,12 @@ const previousBtn = document.getElementById("previous")    // button to call pre
 previousBtn.addEventListener("click",function(){
     count = (count > 0) ? --count : 21                      // count goes down by 1, goes to max value when at zero
     call(count)
-})
+    })
 
 const nextBtn = document.getElementById("next")    // button to call next item
 nextBtn.addEventListener("click",function(){
     count = (count < 21) ? ++count : 0                      // count goes up by 1, goes to zero when at max value
-    call(count)
-})
+    call(count)                                             // count is altered first, then function is called
+    })
 
 }) // closes dom content function
