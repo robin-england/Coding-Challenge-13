@@ -1,0 +1,14 @@
+h2 {
+    font-style: italic;
+}
+#productName:first-letter {
+    text-transform: uppercase;
+}
+#productDescription {
+    width: 400px;
+    height: auto;
+}
+body {
+    background-color: seashell;
+    color: saddlebrown
+}

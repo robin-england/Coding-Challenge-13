@@ -7,10 +7,14 @@ addEventListener("DOMContentLoaded", (event) => {  // ensures DOM is loaded befo
 
 async function call(count){
     
-    document.getElementById("loadingMessage").textContent=`Loading... please be patient`    // Displays loading message immediately
+    document.getElementById("productDescription").textContent=`Loading...`                  // Displays loading message immediately
+    document.getElementById("productName").textContent=``;                                  // Clears content while loading   
+    document.getElementById("productPicture").src=``;
+    document.getElementById("productPicture").width = "";
+    document.getElementById("productPrice").textContent=``;
 
     try {                                                                                   // Then tries to fetch API data
-        await new Promise(resolve => setTimeout(resolve, 50));                            // 2 second delay to show loading message
+        await new Promise(resolve => setTimeout(resolve, 1000));                            // 1 second delay to show loading message
         const response = await fetch("https://www.course-api.com/react-store-products")     // waits for API content to load before proceeding
         if(!response.ok){                                                                   // error message if not successful
             throw new Error("There was an issue with your request.")
